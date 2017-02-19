@@ -1,0 +1,20 @@
+<div class="container-fluid" ng-controller="ServiceManagementCtrl">
+    <div class="header-info"  ng-include src ="'partials/_serviceManagementNav.html'"></div>
+    <div class="content">
+        
+    </div>
+</div>
+<div class="page_text_wrap">
+        <div title="" class="page_text_controls" id="menu_footer">
+            <div class="page_text_up" onmousedown="scrollByClick(-1)">
+            </div>
+            <div class="page_text_down" onmousedown="scrollByClick(1)">
+
+            </div>
+        </div>
+        <div class="page_text_frame">
+            <div class="text_inner">
+                {{'service_management_content' | translate}}
+            </div>
+        </div>
+    </div>

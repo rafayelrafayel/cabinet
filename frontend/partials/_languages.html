@@ -1,0 +1,12 @@
+<!--<div class="container-fluid" ng-controller="LanguagesCtrl">
+    <span  ng-click="changeLanguage('am')" class="btn btn-success">Armenian</span>
+    <span ng-click="changeLanguage('ru')" class="btn btn-warning">Russian</span>
+    <span  ng-click="changeLanguage('en')" class="btn btn-danger">English</span>
+</div>-->
+
+<ul class="langs"  ng-controller="LanguagesCtrl">
+    <li ng-class="{ active: isActive('ru')}" ng-click="changeLanguage('ru')" class="ru" ></li>
+    <li ng-class="{ active: isActive('en')}"  ng-click="changeLanguage('en')" class="en"></li>
+     <li ng-class="{ active: isActive('am')}" ng-click="changeLanguage('am')" class="hy "></li>
+    
+</ul>

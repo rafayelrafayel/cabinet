@@ -1,0 +1,6 @@
+RewriteEngine on
+#RewriteBase /
+#ErrorDocument 404 index.php?route=login [L,QSA]
+#RewriteRule (^editor/) - [L]
+RewriteCond %{REQUEST_URI} !\.(css|css.map|js|jpe?g|gif|png|bmp|ico|ttf|otf|woff|svg|eot|js.map|woff2|json|html)$ [NC]
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]

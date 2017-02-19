@@ -1,0 +1,286 @@
+div.num_keypad{
+    width: 400px;
+    border: 0px solid #000000;
+    height: 100%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.partial_keypad{
+    width: 500px;
+    border: 0px solid #000000;
+
+}
+
+div.full_keypad{
+    width: 1100px;
+    border: 0px solid #000000;
+    height: 100%;
+    margin: 0 auto;
+}
+
+div.list_keypad{
+    width: 1100px;
+    border: 0px solid #000000;
+    height: 100%;
+    margin: 0 auto;
+}
+
+div.keyboard_button_list {
+    /*background: url(/sys_images/S.png) no-repeat ;*/
+    background-color: #0070a9;
+
+    background-size: 100% 100%;
+    margin: 4px;
+
+    width: 250px;
+    height: 55px;
+    float: left;
+    align-items: center;
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+div.keyboard_button_list:active {
+    /*background: url(/sys_images/S_active.png) no-repeat;*/
+    background-color: #CC2222;
+}
+
+div.keyboard_ret_button_list {
+    /*background: url(/sys_images/S.png) no-repeat ;*/
+    background-color: #CC2222;
+
+    background-size: 100% 100%;
+    margin: 4px;
+
+    width: 250px;
+    height: 55px;
+    float: left;
+    align-items: center;
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+
+
+div.keyboard_button_space:active {
+
+    background: url(../sys_images/S_active.png) no-repeat;
+}
+
+hr.keyboard {
+    width: 90%;
+    color: #ffffff;
+}
+
+div.keyboard_button,.keyboard_button_low {
+
+    /* background: url(/sys_images/key.png) no-repeat ;*/
+    background-size: 100% 100%;
+    margin: 4px;
+    width: 70px;
+    height: 48px;
+    float: left;
+    align-items: center;
+
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+div.num_keyboard_button {
+    background-size: 100% 100%;
+    margin: 5px;
+    width: 110px;
+    height: 56px;
+    float: left;
+    align-items: center;
+    text-align: center;
+    line-height: 45px;
+    font-size: 40px;
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+
+}
+
+div.num_keyboard_button:active {
+
+    background: url(../sys_images/key_pressed.png) no-repeat ;
+    background-size: 100% 100%;
+
+}
+
+
+
+div.keyboard_button_space {
+
+    background: url(../sys_images/S.png) no-repeat ;
+    background-size: 100% 100%;
+    margin: 4px;
+
+    width: 538px;
+    height: 48px;
+    float: left;
+    align-items: center;
+
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+div.num_keyboard_button_r {
+
+
+    background-size: 100% 100%;
+    margin: 5px;
+    width: 115px;
+    height: 56px;
+    float: left;
+    align-items: center;
+    text-align: center;
+    line-height: 45px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+div.num_keyboard_button_r:active {
+    background: url(../sys_images/key_pressed.png) no-repeat ;
+    background-size: 100% 100%;
+}
+
+div.num_keyboard_button_D {
+
+    background: url(../sys_images/D.png) no-repeat;
+    background-size: 50% 50%;
+    background-position: center;
+    margin: 5px;
+    width: 110px;
+    height: 56px;
+    float: left;
+    align-items: center;
+    text-align: center;
+    line-height: 80px;
+    font-size: 40px;
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+}
+
+
+
+
+div.num_keyboard_button_D:active {
+
+    background: url(../sys_images/D_active.png) no-repeat ;
+    background-size: 50% 50%;
+    background-position: center;
+
+}
+
+div.num_keyboard_button_Dr {
+
+    background: url(../sys_images/D.png) no-repeat ;
+    background-size: 50% 50%;
+    background-position: center;
+    margin: 5px;
+    width: 155px;
+    height: 80px;
+    float: left;
+    align-items: center;
+
+
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    color:#ffffff;
+
+    border-right: 0px solid #ffffff;
+}
+
+div.num_keyboard_button_Dr:active {
+
+    background: url(../sys_images/D_active.png) no-repeat ;
+    background-size: 50% 50%;
+    background-position: center;
+
+}
+
+
+div.keyboard_button_D {
+
+    background: url(../sys_images/D.png) no-repeat ;
+    background-size: 50% 50%;
+    background-position: center;
+    margin: 4px;
+
+    width: 70px;
+    height: 48px;
+    float: left;
+    align-items: center;
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+div.keyboard_button_D:active {
+
+    background: url(../sys_images/D_active.png) no-repeat ;
+    background-size: 50% 50%;
+    background-position: center;
+
+}
+
+div.keyboard_button_none {
+
+    background: transparent;
+    margin: 4px;
+
+    width: 70px;
+    height: 48px;
+    float: left;
+    align-items: center;
+
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    color:#ffffff;
+}
+
+div.keyboard_button:active,div.num_keyboard_button:active {
+
+    background: url(../sys_images/key_pressed.png) no-repeat ;
+    background-size: 100% 100%;
+
+}
+.keyboard_button_low {
+    background-color: black;
+}
+.full_keypad div:hover{
+    cursor: pointer;
+}
+#menu_keyboard{
+    background: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 555;
+
+}  
+.keyboard_button_up{
+    background: white;
+}
+div.keyboard_button_up{
+    background: url(../img/shift_icon.png) center no-repeat !important;
+} 

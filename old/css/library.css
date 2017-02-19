@@ -1,0 +1,48 @@
+.library-index .grid-view{
+    width: 50%;
+    float: left;
+}
+.library-index .library-data-create{
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+}
+.library-index .library-data-create textarea
+{
+    height: 35px;
+    float: left;
+}
+.marginTop20{
+    margin-top: 20px;
+}
+.deleteCustomCss{
+    margin-top: 0px;
+    margin-right: -10px;
+    float: right;
+}
+
+.f-left{
+    float: left;
+    display: block;
+}
+.marginLeft10{
+    margin-left: 10px;
+}
+.library-index .library-data-create .form-control{
+    width: 60%;
+    margin-bottom: 15px;
+}
+.field-librarydata-text label{
+    width: 100%;
+    clear: both;
+}
+.clearBoth{
+    clear: both;
+}
+.library-data-create .btn{
+    padding: 0px 5px;
+}
+.clearBoth .btn{
+    padding: 6px 12px;
+    text-transform: uppercase;
+}

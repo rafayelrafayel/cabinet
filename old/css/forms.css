@@ -1,0 +1,35 @@
+.form-builder{
+    width: 100%;
+    display: block;
+}
+.create_area,.preview_area{
+    width: 45%;
+    display: block;
+    float: left;
+    border: 1px solid #ccc;
+    min-height: 500px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.create_area{
+    margin-right: 10%;
+}
+.chooseField{
+    display:  block;
+    clear: both;
+    width: 100%;
+}
+.gen_area{
+    padding: 15px;
+}
+.forms-index{
+    width: 44%;
+    float: left;
+    margin-right: 6%;
+}
+.form-fields-index{
+    width: 50%;
+    float: left;
+    display: block;
+}

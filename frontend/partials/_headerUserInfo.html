@@ -1,0 +1,24 @@
+<div class="container-fluid" ng-controller="HeaderUserInfoCtrl">
+    <img src="img/m_vivaCell.jpg">
+    <div class="headerInfoClass">
+        <div class="sidebar_group">
+            <div class="sidebar_label">{{ 'PHONE_NUMBER' | translate }}</div>
+            <div class="sidebar_value">0{{headerInfo.phoneNumber}}</div>
+            <div class="sidebar_small">{{headerInfo.LyfeCycleStatus}}</div>
+        </div>
+        <div class="sidebar_group">
+            <div class="sidebar_label">{{ 'CURRENT_TARIFF_PLAN' | translate }}</div>
+            <div class="sidebar_value">{{headerInfo.TariffPlanDescription}}</div>
+        </div>
+        <div class="sidebar_group">
+            <div class="sidebar_label">{{ 'BALANCE' | translate }}</div>
+            <div class="sidebar_value" ng-if="lngCode !== 'am' && lngCode !== 'ru' ">{{'amd' | translate}} {{headerInfo.Balance}} </div>
+            <div class="sidebar_value"  ng-if="lngCode === 'am' || lngCode === 'ru'"> {{headerInfo.Balance}} {{'amd' | translate}}</div>
+        </div>
+        <div class="sidebar_group">
+            <div class="sidebar_label" ng-if="isPrepaid">{{ 'VALID_TILL' | translate }}</div>
+            <div class="sidebar_label" ng-if="!isPrepaid">{{ 'VALID_TILL_post' | translate }}</div>
+            <div class="sidebar_value">{{headerInfo.ExpiryDate | date:'dd/MM/yyyy HH:mm:ss'}}</div>
+        </div>
+    </div>
+</div>

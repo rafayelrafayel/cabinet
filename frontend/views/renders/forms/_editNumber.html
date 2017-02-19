@@ -1,0 +1,6 @@
+<form class="edit_phone_form cf"  name="form" role="form" ng-submit="changeNumber(type)">
+    <input  type="text" ng-focus="true" required="required"    class="edit_number_input" id="phoneNumber_"  ng-model="list.value"  >
+    <button type="submit"  ng-disabled="form.$invalid" class="btn btn_save"  >{{'Save'| translate}}</button>
+    <button  ng-click="$parent.showDetails = !$parent.showDetails;cancelModify();"   class="btn btn_cancel"  >{{'Cancel'| translate}}</button>
+</form>
+

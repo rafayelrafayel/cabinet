@@ -1,0 +1,64 @@
+<div class="container-fluid ">
+    <div class="col-md-3">
+        <div class="page_icon">
+            <a href="#/myaccount">
+                <span class="page_icon_name"> {{'My_Account' | translate}}</span>
+                <img src="img/my_account_icon.png">
+            </a>
+        </div>
+    </div>
+    <div class="col-md-9 bonus_table ">
+        
+       <div class="my_class">{{'You have '| translate}} <span class="bonus_count">{{BonusPoints}}</span> {{ 'bonus points' | translate}}</div>
+        <form class="form-horizontal myaccount_form"  name="form" role="form" ng-submit="find()">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label class="control-label">{{'From'| translate}}</label>
+                    <div class="input-group date" id="datepicker">
+                        <input class="form-control" ng-model="account.from" name="from" required="required" type="text">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label class="control-label">{{'To'| translate}}</label>
+                    <div class="input-group date" id="datepicker2">
+                        <input class="form-control" name="to"  ng-model="account.to"  required="required" type="text">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <button type="submit"  ng-disabled="isDisabled(account.from, account.to)" class="btn btn_blue cabinet_button"  >{{'Search'| translate}}</button>
+            </div>
+        </form>
+        <table ng-if="historyList.length > 0" class="bonus_table myaccount_tbale">
+            <colgroup>
+                <col style="width: 120px;">
+                <col>
+                <col style="width: 86px;">
+            </colgroup>
+            <thead>
+            <tr>
+                <td>{{'Activation Date'| translate}}</td>
+                <td>{{'Activated gifts'| translate}}</td>
+                <td>{{'Points'| translate}}</td>
+            </tr>
+            </thead>
+            <tbody class="contacts">
+            <tr ng-repeat="history in historyList">
+                <td>{{history.CreatedDate | date:'MM/dd/yyyy'}}</td>
+                <td>{{'gift_' + history.BonusUnits| translate}}</td>
+                <td>{{history.BonusUnits}} </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="message" ng-if="historyList.length == 0">
+            {{'No data found' | translate}}
+        </div>
+    </div>
+
+
+
+
+</div><!--/row-->

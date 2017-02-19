@@ -1,0 +1,42 @@
+.member-types-index .grid-view{
+    width: 50%;
+    float: left;
+}
+.member-types-index .Roles{
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+}
+
+.marginTop20{
+    margin-top: 20px;
+}
+.deleteCustomCss{
+    margin-top: -75px;
+    margin-left: 85px;
+}
+
+.f-left{
+    float: left;
+    display: block;
+}
+.marginLeft10{
+    margin-left: 10px;
+}
+.member-types-index .Roles .form-control{
+    width: 60%;
+    margin-bottom: 15px;
+}
+.field-roledata-text label{
+    width: 100%;
+}
+.clearBoth{
+    clear: both;
+}
+.Roles .btn{
+    padding: 0px 5px;
+}
+.clearBoth .btn{
+    padding: 6px 12px;
+    text-transform: uppercase;
+}

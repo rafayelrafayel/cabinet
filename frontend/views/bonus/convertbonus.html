@@ -1,0 +1,64 @@
+<div class="container-fluid ">
+
+
+</div>
+<div class="tittle col-md-3">
+    <span class="page_icon">
+        <span class="page_icon_name"> {{'Convert_Points'| translate}}</span>
+        <img src="img/convert_points_icon.png">
+    </span>
+    <p class="bonus_small_info">
+        <sup>1</sup> {{'bonus_info_1' | translate}} <br />
+        <sup>2</sup> {{'bonus_info_2' | translate}}<br />
+        <sup>3</sup> {{'bonus_info_3' | translate}}<br />
+        <sup>4</sup> {{'bonus_info_4' | translate}}<br />
+        <sup>5</sup> {{'bonus_info_5' | translate}}<br />
+    </p>
+</div>
+<div class="col-md-9">
+    <form class="form-horizontal"  name="form" role="form" ng-submit="convert()">
+        <table class="bonus_table">
+            <caption>{{'You have '| translate}} <span class="bonus_count">{{BonusPoints}}</span> {{ 'bonus points' | translate}}</caption>
+            <colgroup>
+                <col style="width: 65px;">
+                <col>
+                <col style="width: 86px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <td>{{'Select'| translate}}</td>
+                    <td>{{'Gift'| translate}}</td>
+                    <td>{{'Number of points'| translate}}</td>
+                </tr>
+            </thead>
+            <tbody class="contacts">
+                <tr ng-repeat="bonus in bonusList" ng-click="checkRadio($event, bonus)">
+                    <td><span class="like_radio"></span><input type="radio"  name="gift" value="{{bonus.PrizeId}}" ng-disabled="isDisabled(bonus.PrizeId)" ng-model="convertBonus.PrizeId" ></td>
+                    <td>{{'gift_' + bonus.PrizeUnits | translate}}</td>
+                    <td>{{bonus.PrizeUnits}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="form-group ">
+            <div class="col-sm-12">
+                <button type="submit" id="convert_bonus_btn"  class="btn btn_red cabinet_button"  >{{'Convert'| translate}}</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<div class="page_text_wrap">
+        <div title="" class="page_text_controls" id="menu_footer">
+            <div class="page_text_up" onmousedown="scrollByClick(-1)">
+            </div>
+            <div class="page_text_down" onmousedown="scrollByClick(1)">
+
+            </div>
+        </div>
+        <div class="page_text_frame">
+            <div class="text_inner">
+                {{'convert_bonus_content' | translate}}
+            </div>
+        </div>
+    </div>

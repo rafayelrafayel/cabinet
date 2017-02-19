@@ -1,0 +1,24 @@
+
+<div class="login_center">
+    <img src="img/m_vivaCell.jpg">
+    <div style="position: relative">
+        <div style="    width: 22.9%;
+             float: left;
+             margin-top: 10px;
+             margin-right: 8px;">
+            <selectbox ng-model="login.phoneCode" options="selectData" on-change="change(value)" value="collectionSelected"  on-change="change(value)"></selectbox>
+        </div>
+
+        <!--        <select class="form-control phoneCode" ng-init="login.phoneCode = 77" ng-options="value.id as value.label for value in selectData" ng-model="login.phoneCode"> </select>-->
+        <input type="text" required="required"  style="width: 75%;"   class="form-control" id="phoneNumber" autocomplete="off" ng-model="login.phoneNumber" placeholder="{{'Enter_phone'| translate}}">
+        <!--        <span class="phoneExample">{{'example'| translate}} 94999999</span>-->
+    </div>
+    <div>
+        <input type="password" required="required" class="form-control" id="password" ng-model="login.password" placeholder="{{'Enter_password'| translate}}">
+    </div>
+    <span class="help_info">
+        {{'help_info' | translate}}
+    </span>
+    <button type="submit" style="margin-bottom: 10px;"  ng-disabled="form.$invalid" class="btn btn-success"  >{{'Login'| translate}}</button>
+    <img src="img/mobi_axjik.jpg">
+</div>

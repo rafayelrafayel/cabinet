@@ -1,0 +1,37 @@
+<form class="form-horizontal poghancum_form"  name="form" role="form" ng-submit="transfer()">
+
+    <div class="tittle col-md-3">
+        <span class="page_icon">
+            <span class="page_icon_name"> {{'Poghancum' | translate}}</span>
+            <img src="img/poghancum.png">
+        </span>
+    </div>
+    <div class="col-md-9">
+        <div class="form-group">
+            <label  for="phoneNumber">{{'Phone' | translate}}</label>
+            <input type="text"  required="required" ng-disabled="{{info.MinBalanceRemainder > (currentInfo.Balance - (form.amount))}}" pattern="[0-9]{9}"   class="form-control"   class="form-control" id="phoneNumber" ng-model="form.recipientPhoneNumber" >
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">{{'Amount' | translate}}</label>
+            <input type="text"  required="required" ng-disabled="{{info.MinBalanceRemainder > (currentInfo.Balance - (form.amount))}}"  class="form-control" id="phoneNumber" ng-model="form.amount" >
+        </div>
+        <button type="submit"   ng-disabled="isDisabled(form.amount,form.$invalid)" class="btn cabinet_button btn_blue"  >{{'Transfer' |translate}}</button>
+
+    </div>
+</form>
+<div class="page_text_wrap">
+        <div title="" class="page_text_controls" id="menu_footer">
+            <div class="page_text_up" onmousedown="scrollByClick(-1)">
+            </div>
+            <div class="page_text_down" onmousedown="scrollByClick(1)">
+
+            </div>
+        </div>
+        <div class="page_text_frame">
+            <div class="text_inner">
+                {{'poghancum_content' | translate}}
+            </div>
+        </div>
+    </div>
+
+<!--ng-disabled="{{info.MinBalanceRemainder < currentInfo.Balance}}"   {{(parseInt(newday.day) + currentInfo.ExpiryDateDays)<=info.MaxDayCountForAdd}}-->

@@ -1,0 +1,4 @@
+cabinetControllers.controller('AccountManagementCtrl',[ function () {
+
+}]);
+

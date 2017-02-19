@@ -1,0 +1,6 @@
+<ul class="content_menu cf" ng-controller="NavmenuCtrl">
+    <li ng-class="{ active: isActive('/serviceManagement',['/callfriend','/callforwarding'])}" ><a href="#/serviceManagement">{{ 'SERVICE_MANAGEMENT' | translate }}</a></li>
+    <li ng-class="{ active: isActive('/accountManagement',['/detailedbill','/newday','/poghancum'])}" ><a href="#/accountManagement">{{ 'ACCOUNT_MANAGEMENT' | translate }}</a></li>
+    <li ng-show="IsPrepaid" ng-class="{ active: isActive('/bonus',['/convertbonus','/myaccount'])}" ><a href="#/bonus">{{ 'VIVACELL_MTS_BONUS' | translate }}</a></li>
+    <li ng-class="{ active: isActive('/changepassword')}"><a href="#/changepassword">{{ 'PROFILE_MANAGEMENT' | translate }}</a></li>
+</ul>

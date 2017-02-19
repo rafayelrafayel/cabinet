@@ -1,0 +1,55 @@
+.role-controls-index .grid-view{
+    width: 50%;
+    float: left;
+}
+.role-controls-index .role-actions-create{
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+}
+.role-controls-index .role-actions-create textarea {
+    height: 55px;
+    //float: left;
+}
+.marginTop20{
+    margin-top: 20px;
+}
+.deleteCustomCss{
+    margin-top: -50px;
+    margin-right: 51px;
+    float: right;
+}
+
+.f-left{
+    float: left;
+    display: block;
+}
+.marginLeft10{
+    margin-left: 10px;
+}
+.role-controls-index .role-actions-create .form-control {
+   // width: 90%;
+    margin-bottom: 15px;
+    margin-right: 7px;
+}
+.field-roledata-text label{
+    width: 100%;
+}
+.clearBoth{
+    clear: both;
+}
+.role-actions-create .btn{
+   // padding: 0px 5px;
+}
+.clearBoth .btn{
+    padding: 6px 12px;
+    text-transform: uppercase;
+}
+.form_class{
+    float:  left;
+    width: 90%;
+    clear: both;
+}
+.form-group label{
+    clear: both;
+}

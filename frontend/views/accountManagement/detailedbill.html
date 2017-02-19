@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="col-md-3">
+        <div class="page_icon">
+            <a href="#/detailedbill">
+                <span class="page_icon_name"> {{'Detailed_Bill'| translate}}</span>
+                <img src="img/det_bill.png">
+            </a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <form class="form-horizontal myaccount_form"  name="form" role="form" ng-submit="sendMessage()">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label class="control-label">{{'From'| translate}}</label>
+                    <div class="input-group date" id="datepicker">
+                        <input class="form-control" ng-model="account.from" name="from" required="required" type="text">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label class="control-label">{{'To'| translate}}</label>
+                    <div class="input-group date" id="datepicker2">
+                        <input class="form-control" name="to"  ng-model="account.to"  required="required" type="text">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <div class="form-group">
+                        <label>{{'Email'| translate}}</label>
+                        <input style="background: white" data-ng-model="account.email"  ng-pattern="regex"  class="form-control" type="text" name='email'  required>
+                        <div class="error" ng-show="form.email.$error.required">
+                            {{'email_error'| translate}}
+                        </div>
+                        <div class="error" ng-show="form.email.$error.pattern">
+                            {{'email_wrong_error'| translate}}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <button type="submit"  ng-disabled="isDisabled(account.from, account.to, form.$invalid)" class="btn btn_blue cabinet_button"  >{{'Search'| translate}}</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+    <div class="page_text_wrap">
+        <div title="" class="page_text_controls" id="menu_footer">
+            <div class="page_text_up" onmousedown="scrollByClick(-1)">
+            </div>
+            <div class="page_text_down" onmousedown="scrollByClick(1)">
+
+            </div>
+        </div>
+        <div class="page_text_frame">
+            <div class="text_inner">
+                {{'detail_bill_content'| translate}}
+            </div>
+        </div>
+    </div>

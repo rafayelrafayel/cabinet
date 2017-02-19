@@ -1,0 +1,39 @@
+<form class="form-horizontal new_day_form"  name="form" role="form" ng-submit="convert()">
+
+    <div class="tittle col-md-3">
+        <span class="page_icon">
+            <span class="page_icon_name">{{'New_Day' | translate}}</span>
+            <img src="img/new_day.png">
+        </span>
+    </div>
+    <div class="col-md-9">
+        <div class="form-group">
+            <label for="phoneNumber">{{'nd_label' | translate}}</label>
+            <input ng-change='alert("changed!")' type="text" required="required" ng-disabled="{{info.MinBalanceRemainder > (currentInfo.Balance - (parseInt(newday.day) * info.DayCost))}}"    class="form-control" id="phoneNumber" ng-model="newday.day">
+        </div>
+        <!--ng-show="(info.MinBalanceRemainder < (currentInfo.Balance - (parseInt(newday.day) * info.DayCost)))"-->
+        <div >
+            <p class="new_day_price_label">{{'Price' | translate}}</p>
+            <span class="new_day_price">{{parseInt(newday.day) * info.DayCost}}  AMD</span>
+        </div>
+        <button class="btn cabinet_button btn_blue" type="submit"    ng-disabled="isDisabled(form.$invalid)" >{{'Convert' |translate}}</button>
+
+    </div>
+</form>
+<div class="page_text_wrap">
+        <div title="" class="page_text_controls" id="menu_footer">
+            <div class="page_text_up" onmousedown="scrollByClick(-1)">
+            </div>
+            <div class="page_text_down" onmousedown="scrollByClick(1)">
+
+            </div>
+        </div>
+        <div class="page_text_frame">
+            <div class="text_inner">
+                {{'new_day_content' | translate}}
+            </div>
+        </div>
+    </div>
+
+
+<!--ng-disabled="{{info.MinBalanceRemainder < currentInfo.Balance}}"   {{(parseInt(newday.day) + currentInfo.ExpiryDateDays)<=info.MaxDayCountForAdd}}-->

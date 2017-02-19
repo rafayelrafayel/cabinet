@@ -1,0 +1,22 @@
+
+
+table{
+    border: 1px solid #ddd;
+    width: 100% !important;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    font-family:Tangerine,sans-serif;
+}
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.t-center td {
+    font-family: Arian AMU;
+    font-weight: bold;
+    text-align: center;
+}

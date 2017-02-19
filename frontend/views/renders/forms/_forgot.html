@@ -1,0 +1,8 @@
+<div class="login_center">
+    <h2 class="cabinet_title">{{ 'LOGIN_TITLE' | translate }}</h2>
+    <img src="img/m_vivaCell.jpg">
+    <input type="text" required="required"    class="form-control" id="phoneNumber" ng-model="login.phoneNumber" placeholder="">
+    <button type="submit"  ng-disabled="form.$invalid" class="btn btn-success"  >{{'Forgot_Password' | translate}}</button>
+     <a ng-click="$parent.showDetails = !$parent.showDetails" class="forgot_password_link">{{ 'CANCEL' | translate }}</a>
+    <img src="img/mobi_axjik.jpg">
+</div>

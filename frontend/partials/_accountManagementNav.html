@@ -1,0 +1,21 @@
+<h2 class="cabinet_title">{{ 'ACCOUNT_MANAGEMENT' | translate }}</h2>
+<div class="sm_menu">
+    <div class="page_icon">
+        <a href="#/detailedbill">
+            <span class="page_icon_name"> {{'Detailed_Bill' | translate}}</span>
+            <img src="img/det_bill.png">
+        </a>
+    </div>
+    <div ng-show="IsPrepaid"  class="page_icon">
+        <a href="#/newday">
+            <span class="page_icon_name"> {{'New_Day' | translate}}</span>
+            <img src="img/new_day.png">
+        </a>
+    </div>
+    <div ng-show="IsPrepaid"  class="page_icon">
+        <a href="#/poghancum">
+            <span class="page_icon_name"> {{'Poghancum' | translate}}</span>
+            <img src="img/poghancum.png">
+        </a>
+    </div>
+</div>

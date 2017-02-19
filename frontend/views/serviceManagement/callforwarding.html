@@ -1,0 +1,57 @@
+<form class="form-horizontal call_forwarding_form"  name="form" role="form" ng-submit="forwardNumbers()">
+
+    <div class="tittle col-md-3">
+        <span class="page_icon">
+            <span class="page_icon_name">{{'Call Forwarding'| translate}}</span>
+            <img src="img/call_friend.png">
+        </span>
+    </div>
+    <div class="col-md-9">
+        <div class="form-group">
+            <label class=" col-sm-12" for="phoneNumber">{{'c_fw_label_1'| translate}}</label>
+            <input type="text"     pattern="[0-9]{9}" class="form-control CfuNumber_class" id="phoneNumber" ng-model="forward.CfuNumber"  >
+            <button  ng-disabled="isDisabled('CfuNumber')"   class="btn btn-danger"  ng-click="cancelForward('CFU', $event)">{{'Cancel2'| translate}}</button>
+        </div>
+        <div class="form-group">
+            <label class=" col-sm-12" for="phoneNumber">{{'c_fw_label_2'| translate}}</label>
+            <input type="text"  ng-disabled="forward.CfuNumber != ''"    pattern="[0-9]{9}" class="form-control" id="phoneNumber" ng-model="forward.CfnryNumber"  >
+            <button ng-disabled="isDisabled('CfnryNumber')"     class="btn btn-danger"  ng-click="cancelForward('CFNRY', $event)">{{'Cancel2'| translate}}</button>
+        </div>
+        <div class="form-group ">
+            <div ng-class="{'disabled_class': forward.CfuNumber != '' }"style="width: 185px;">
+                <selectbox    options="selectData" on-change="change(value)" value="collectionSelected"  on-change="change(value)"></selectbox>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class=" col-sm-12" for="phoneNumber">{{'c_fw_label_3'| translate}}</label>
+            <input type="text" ng-disabled="forward.CfuNumber != ''"   pattern="[0-9]{9}" class="form-control" id="phoneNumber" ng-model="forward.CfnrcNumber"  >
+            <button  ng-disabled="isDisabled('CfnrcNumber')"     class="btn btn-danger"  ng-click="cancelForward('CFNRC', $event);">{{'Cancel2'| translate}}</button>
+        </div>
+        <div class="footer_form">
+            <div class="form-group f-left">
+                <label class=" col-sm-12" for="phoneNumber">{{'c_fw_label_4'| translate}}</label>
+                <input type="text" ng-disabled="forward.CfuNumber != ''"    pattern="[0-9]{9}" class="form-control" id="phoneNumber" ng-model="forward.CfbNumber"  >
+                <button  ng-disabled="isDisabled('CfbNumber')"     class="btn btn-danger"  ng-click="cancelForward('CFB', $event)">{{'Cancel2'| translate}}</button>
+
+            </div>
+            <div class="f-left">
+                 <button type="submit" class="btn btn_red btn_big btn_forward"  >{{'Forward'| translate}}</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+<div class="page_text_wrap">
+    <div title="" class="page_text_controls" id="menu_footer">
+        <div class="page_text_up" onmousedown="scrollByClick(-1)">
+        </div>
+        <div class="page_text_down" onmousedown="scrollByClick(1)">
+
+        </div>
+    </div>
+    <div class="page_text_frame">
+        <div class="text_inner">
+            {{'call_forwardind_content'| translate}}
+        </div>
+    </div>
+</div>

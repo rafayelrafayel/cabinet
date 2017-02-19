@@ -1,0 +1,106 @@
+<!--<div class="header-info"  ng-include src ="'partials/_serviceManagementNav.html'"></div>-->
+<div class="tittle col-md-3">
+    <span class="page_icon">
+        <span class="page_icon_name">{{"Call a Friend" | translate }}</span>
+        <img src="img/call_friend.png">
+    </span>
+</div>
+<div class="col-md-9 service_call">
+    <div class="col-md-6 addToBlockList" ng-show="isBlockedService">
+        <div class=" call_friends_col">
+            <h3 class="cabinet_title">"{{"Blacklist" | translate }}"</h3>
+            <form role="form" name="blockForm" ng-if="blacklist.length < 3" ng-submit="addToBlock()">
+                <div class="cf">
+                    <input type="text" required="required" pattern="[0-9]{9}" maxlength="9"  ng-model="block.phoneNumber" class="cabinet_input  call_friends_input" id="phoneNumber"  />
+                    <button type="submit"  ng-disabled="blockForm.$invalid" class="btn btn_red cabinet_button call_friends_sbt"  >{{"Add" | translate }}</button>
+                </div>
+            </form>
+            <div class="blockContacts">
+                <ul class="numbers_list">
+                    <li ng-if="blacklist.length > 0">{{'PHONE_NUMBER' | translate}}</li>
+                    <li ng-repeat="each in blacklist">
+                        <div class="cf" >
+                            <span ng-show="!showDetails" >{{'0' + each.value}}</span>
+                            <div edit-number="each" type="BlackList"  ng-show="showDetails"></div>
+                            <a ng-show="!showDetails" ng-click="showDetails = ! showDetails;fireKeyBord($event)" class="btn btn_edit_number">{{"Change" | translate }}</a>
+                            <a ng-show="!showDetails" ng-click="unBlockFromList('0' + each.value)" class="btn btn_delete_number">{{"Delete" | translate }}</a>
+                        </div>
+                    </li>
+                </ul>
+<!--                <div class="numbers_controls_links">
+                    <span class="left">{{"Change" | translate }}</span>
+                    <span class="right">Remove</span>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 addToWhiteList" ng-show="!isBlockedService">
+        <div class="call_friends_col">
+            <h3 class="cabinet_title">"{{"WhiteList" | translate }}"</h3>
+            <form role="form" name="whiteForm" ng-if="whitelist.length < 3" ng-submit="addToWhite()">
+                <div class="cf">
+                    <input type="text" required="required"   ng-model="white.phoneNumber"  class="cabinet_input call_friends_input" id="phoneNumber"   />
+                    <button type="submit"  ng-disabled="whiteForm.$invalid" class="btn btn_red cabinet_button call_friends_sbt"  >{{"Add" | translate }}</button>
+                </div>
+            </form>
+            <div class="blockContacts">
+                <ul  class="numbers_list">
+                    <li  ng-if="whitelist.length > 0"> {{'PHONE_NUMBER' | translate}}</li>
+                    <li ng-repeat="each in whitelist">
+                        <div  class="cf">
+                            <span ng-show="!showDetails" >{{'0' + each.value}}</span>
+                            <div edit-number="each" type="WhiteList"  ng-show="showDetails"></div>
+                            <a ng-show="!showDetails" ng-click="showDetails = ! showDetails;fireKeyBord($event)" class="btn btn_edit_number">{{"Change" | translate }}</a>
+                            <a ng-show="!showDetails" ng-click="addToBlock('0' + each.value)" class="btn btn_delete_number">{{"Delete" | translate }}</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 addToFavoriteList">
+        <div class="call_friends_col">
+            <h3 class="cabinet_title">"{{"Favorite__Numbers" | translate }}"</h3>
+            <form role="form" name="favoriteForm" ng-if="favoritelist.length < 3" ng-submit="addToFavorite()">
+                <div class="cf">
+                    <input type="text" required="required"  pattern="[0-9]{9}"  ng-model="favorite.phoneNumber"  class="cabinet_input call_friends_input" id="phoneNumber"   />
+                    <button type="submit"  ng-disabled="favoriteForm.$invalid" class="btn btn_red cabinet_button call_friends_sbt"  >{{"Add" | translate }}</button>
+               </div>
+            </form>
+            <div class="favoriteontacts">
+                <ul class="numbers_list">
+                     <li ng-if="favoritelist.length > 0">{{'PHONE_NUMBER' | translate}}</li>
+                    <li ng-repeat="each in favoritelist">
+                        <div class="cf">
+                            <span ng-show="!showDetails" >{{'0' + each.value}}</span>
+                            <div edit-number="each" type="FavoriteList"  ng-show="showDetails"></div>
+                            <a ng-show="!showDetails" ng-click="showDetails = ! showDetails;fireKeyBord($event)" class="btn btn_edit_number">{{"Change" | translate }}</a>
+                            <a ng-show="!showDetails" ng-click="unBlockFromList(each.value)" class="btn btn_delete_number">{{"Delete" | translate }}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page_text_wrap">
+        <div title="" class="page_text_controls" id="menu_footer">
+            <div class="page_text_up" onmousedown="scrollByClick(-1)">
+            </div>
+            <div class="page_text_down"  onmousedown="scrollByClick(1)">
+
+            </div>
+        </div>
+        <div class="page_text_frame">
+            <div class="text_inner">
+              {{'call_friend_content' | translate}}
+            </div>
+        </div>
+    </div>
+<div class="col-md-12">
+    <div class="buttons col-md-12" style=" margin-top: 30px;text-align: center;">
+        <button class="btn big_lock"  ng-show="isBlockedService" ng-click="blockAll()"><span class="lock_icon"></span>{{"Block For all" | translate }}</button>
+        <button class="btn big_lock"  ng-show="!isBlockedService" ng-click="unBlockAll()"><span class="unlock_icon"></span>{{"Activate For all" | translate }}</button>
+    </div>
+</div>
